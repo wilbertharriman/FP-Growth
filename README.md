@@ -10,7 +10,8 @@ FP-growth is an improved version of the Apriori Algorithm which is widely used f
 g++ -std=c++11 -o fpgrowth FPGrowth.cpp
 ./fpgrowth [min support] [input file] [output file]
 ```
-Example
+## Example
+
 ```bash
 g++ -std=c++11 -o fpgrowth FPGrowth.cpp
 ./fpgrowth 0.2 sample.txt out.txt
