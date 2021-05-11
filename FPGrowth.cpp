@@ -180,7 +180,9 @@ void mineTree(vector<Entry *> *header, int minSupport, vector<int> *prefix, vect
         int *table = getFreqTable(data, largestItem);
         vector<Entry *> newHeader = constructHeader(table, largestItem, minSupport);
         if (newHeader.size() != 0) {
+            // Construct conditional tree
             Node *conditionalTree = constructTree(&newHeader, data);
+            // Recursively mine conditional tree
             mineTree(&newHeader, minSupport, &tmp, frequentItems);
         }
     }
@@ -224,11 +226,15 @@ int main(int argc, char *argv[]) {
     double minSupport = minSupportRatio * num;
     int *table = getFreqTable(&data, largestItem);
     clean(&data, table, minSupport, largestItem);
+
     vector<Entry *> header = constructHeader(table, largestItem, minSupport);
     Node *FPtree = constructTree(&header, &data);
+
     vector<vector<int>> frequentItems;
     vector<int> prefix;
+
     mineTree(&header, minSupport, &prefix, &frequentItems);
+
     sort(frequentItems.begin(), frequentItems.end(), [](const vector<int> & a, const vector<int> & b){ 
         if (a.size() != b.size()) {
             return a.size() < b.size(); 

@@ -10,6 +10,7 @@ FP-growth is an improved version of the Apriori Algorithm which is widely used f
 g++ -std=c++11 -o fpgrowth FPGrowth.cpp
 ./fpgrowth [min support] [input file] [output file]
 ```
+
 ## Example
 
 ```bash
@@ -18,5 +19,6 @@ g++ -std=c++11 -o fpgrowth FPGrowth.cpp
 ```
 
 ## References
+
 - https://towardsdatascience.com/understand-and-build-fp-growth-algorithm-in-python-d8b989bab342
 - https://towardsdatascience.com/fp-growth-frequent-pattern-generation-in-data-mining-with-python-implementation-244e561ab1c3
