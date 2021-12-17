@@ -2,7 +2,7 @@
 
 ## What is FP-Growth?
 
-FP-growth is an improved version of the Apriori Algorithm which is widely used for frequent pattern mining(AKA Association Rule Mining). It is used as an analytical process that finds frequent patterns or associations from data sets. For example, grocery store transaction data might have a frequent pattern that people usually buy chips and beer together.
+FP-growth is an improved version of the Apriori Algorithm widely used for frequent pattern mining in data. It is used as an analytical process to find association in dataset. For example, grocery store transactions might tell us that people tend to buy chips and beer together.
 
 ## Usage
 
